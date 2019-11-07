@@ -10,8 +10,7 @@ int main() {
 	    int cost[m][m],final[m][m]; 
 	    for (int i = 0; i < m; i++)
 	        for (int j = 0; j < m; j++)
-	            cin >> cost[i][j];
-	   
+	            cin >> cost[i][j]; 
 	  final[0][0] = cost[0][0];
 	  
 	  for (int i = 1; i < m; i++)
@@ -21,7 +20,6 @@ int main() {
 	 for(int i = 1; i < m; i++)
 	        for (int j = 1; j < m; j++)
 	            final[i][j] = min(min(final[i-1][j-1],final[i-1][j]),final[i][j-1]) + cost[i][j];
-	
 	cout << final[m-1][m-1];
 }
 	return 0;
